@@ -1,0 +1,172 @@
+<!--
+Theme by: WebThemez.com  
+-->
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html lang="en" class="ie ie6"> <![endif]--> 
+<!--[if IE 7 ]>	<html lang="en" class="ie ie7"> <![endif]--> 
+<!--[if IE 8 ]>	<html lang="en" class="ie ie8"> <![endif]--> 
+<!--[if IE 9 ]>	<html lang="en" class="ie ie9"> <![endif]--> 
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>HTML5 Responsive coming soon page - Fidget</title>
+<meta name="description" content="">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold"> 
+<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+<link href="static/et-line-font/style.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="static/css/styles.css">
+</head>
+<!--
+Theme by: WebThemez.com  
+-->
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html lang="en" class="ie ie6"> <![endif]--> 
+<!--[if IE 7 ]>	<html lang="en" class="ie ie7"> <![endif]--> 
+<!--[if IE 8 ]>	<html lang="en" class="ie ie8"> <![endif]--> 
+<!--[if IE 9 ]>	<html lang="en" class="ie ie9"> <![endif]--> 
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>HTML5 Responsive coming soon page - Fidget</title>
+<meta name="description" content="">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold"> 
+<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+<link href="static/et-line-font/style.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="static/css/styles.css">
+</head>
+
+
+<img style="width:100%;" src="static/images/CHLA-What-You-Should-Know-Covid-19-1200x628-01.jpg" width="1920" height="1080" align="middle" />
+
+<body id="home">
+<section class="main">
+<div id="subscribe" class="wrapper topSection">
+	<div id="Header">
+	<div class="wrapper">
+		</div>
+	</div>
+	
+		
+	</div>
+
+<div class="countdown styled"><html><h1>The COVID-19 Have been alive for {{ days_of_cov_19 }} days</h1>
+<h3>The World Health Organization (WHO) declared the 2019–20 coronavirus outbreak a Public Health Emergency of International Concern (PHEIC) on 30 January 2020 </h3>
+</div> 
+
+</section>
+<section class="subscribe spacing">
+<div class="container">
+
+<div id="subscribe">  
+<h3>Subscribe To Get Latest Update</h3>
+	<form method="POST" >
+        {% csrf_token %}
+		<p class="subscribe-input"><input type="text" name="email" size="20" placeholder="Subscribe your e-mail Id " value=""><input type="submit" value="Submit" name="Submit"></p>
+	</form>
+    {% if messages %}
+  <script>
+    {% for msg in messages %}
+      alert('{{ msg.message }}');
+    {% endfor %}
+  </script>
+{% endif %}
+
+	<div id="socialIcons">
+		<ul> 
+			<li><a href="" title="Twitter" class="twitterIcon"></a></li>
+			<li><a href="" title="facebook" class="facebookIcon"></a></li>
+			<li><a href="" title="linkedIn" class="linkedInIcon"></a></li>
+		</ul>
+	</div>
+</div>
+ 
+</div>
+</section>
+
+<section class="features spacing">
+  <div class="container">
+    <h2 class="text-center">Features</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="featuresPro">
+          <div class="col-md-3 col-sm-3 col-xs-3 text-center icon"><i class="icon-linegraph"></i></div>
+          <div class="col-md-9 col-sm-9 col-xs-9"> 
+            <!--features 1-->
+            <h4>Daily Increasement</h4>
+            <p>A Line Chart to show the daily confirmed cases in daily vs total</p>
+			<a href="http://127.0.0.1:8000/covid_daily_increasement">click</a>
+			<P></P>
+			<p>Entery a range to customize your chart  </p>
+			
+			<form method="POST" >
+			{% csrf_token %}
+			<p class="chart-increasement-input"><input type="text" name="increasement_from_date" size="16" placeholder="From(YYYY-MM-DD)" value=""><input type="text" name="increasement_to_date" size="16" placeholder="To(YYYY-MM-DD)" value=""><input type="submit" value="Submit" name="increasement_Submit"  style="background-color: #f05b5d;color: #FFFFFF"></p>
+			</form>
+			
+			
+            <!--features 1 end--> 
+          </div>
+        </div>
+        <div class="featuresPro">
+    
+     
+	 
+	 
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="featuresPro">
+		<div class="col-md-3 col-sm-3 col-xs-3 text-center icon"><i class="icon-genius"></i></div>
+          <div class="col-md-9 col-sm-9 col-xs-9"> 
+            <!--features 2-->
+            <h4>Daily Update in River Theme</h4>
+            <p>A River Theme chart to show “Confirme”，“Suspecet”,"dead" and "heal" in river theme </p>
+			
+			<a href="http://127.0.0.1:8000/covid_daily_update_themeRiver/">click</a>
+			<P></P>
+			<p>Entery a range to customize your chart  </p>
+			
+			
+			<form method="POST" >
+			{% csrf_token %}
+			<p class="chart-themeRiver-input"><input type="text" name="themeRiver_from_date" size="14" placeholder="From(YYYY-MM-DD)" value=""><input type="text" name="themeRiver_to_date" size="14" placeholder="To(YYYY-MM-DD)" value=""><input type="submit" value="Submit" name="themeRiver_Submit"  style="background-color: #f05b5d;color: #FFFFFF"></p>
+			</form>
+				
+				<!--features 2 end--> 
+			  </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+
+
+
+
+
+</section>
+
+<section class="subscribe spacing">
+<div class="container">
+
+<div id="subscribe">  
+<h3>Download source date From 2020-02-12 to Today </h3>
+	<form method="POST" >
+        {% csrf_token %}
+		
+
+		<p class="subscribe-input"><input type="text" name="source_data_from_date" size="10" placeholder="From(YYYY-MM-DD)" value=""><input type="text" name="source_data_to_date" size="10" placeholder="To(YYYY-MM-DD)" value=""><input type="submit" value="Submit" name="Submit"></p>
+
+		
+	</form>
+
+</div>
+ 
+</div>
+</section>
+

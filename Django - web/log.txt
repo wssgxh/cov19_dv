@@ -1,0 +1,28 @@
+2020-05-25 11:47:59[0051],theme river chart Saved
+2020-05-25 11:41:52[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:33:36[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:33:36[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:33:02[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:33:02[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:31:14[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:31:14[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:30:28[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:30:28[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:19:21[0051],theme river chart Saved
+2020-05-25 11:19:21[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:16:43[0051],theme river chart Saved
+2020-05-25 11:16:43[0041],chart_cov_daily_increasement Saved
+2020-05-25 10:21:10[0051],theme river chart Saved
+2020-05-25 10:21:10[0041],chart_cov_daily_increasement Saved
+2020-05-25 10:15:41[0051],theme river chart Saved
+2020-05-25 10:15:41[0041],chart_cov_daily_increasement Saved
+2020-05-25 10:00:15[0051],theme river chart Saved
+2020-05-25 10:00:15[0041],chart_cov_daily_increasement Saved
+2020-05-21 17:21:50[0051],theme river chart Saved
+2020-05-21 17:21:50[0041],chart_cov_daily_increasement Saved
+2020-05-21 17:20:17[0051],theme river chart Saved
+2020-05-21 17:20:17[0041],chart_cov_daily_increasement Saved
+2020-05-21 17:17:20[0051],theme river chart Saved
+2020-05-21 17:17:20[0041],chart_cov_daily_increasement Saved
+2020-05-21 17:14:37[0051],theme river chart Saved
+2020-05-21 17:14:37[0041],chart_cov_daily_increasement Saved

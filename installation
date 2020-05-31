@@ -1,0 +1,12 @@
+please install below module for Map
+
+https://www.jb51.net/article/167064.htm
+
+pip install pyecharts==0.5.10
+pip install echarts-countries-pypkg
+pip install echarts-china-provinces-pypkg
+pip install echarts-china-cities-pypkg
+pip install echarts-china-counties-pypkg
+
+
+http://pyecharts.org/#/zh-cn/geography_charts

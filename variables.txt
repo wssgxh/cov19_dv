@@ -1,0 +1,2 @@
+system=Windows
+project_path=E:\云\OneDrive\code\python\cov19_dv

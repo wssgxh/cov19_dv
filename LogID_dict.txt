@@ -1,0 +1,4 @@
+log("0011",None,"Successfully save today's data")
+log("0021", None, "get data from Tencent news")
+log("0031", None, "China Map Saved")
+log("0041", None, "chart_cov_daily_increasement Saved")

@@ -1,0 +1,158 @@
+2020-05-25 12:00:26[0051],theme river chart Saved
+2020-05-25 12:00:26[0041],chart_cov_daily_increasement Saved
+2020-05-25 12:00:26[0061],Get daily new data
+2020-05-25 11:58:43[0051],theme river chart Saved
+2020-05-25 11:58:43[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:58:43[0061],Get daily new data
+2020-05-25 11:47:43[0051],theme river chart Saved
+2020-05-25 11:27:44[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:27:31[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:26:50[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:15:28[0051],theme river chart Saved
+2020-05-25 11:15:28[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:14:17[0051],theme river chart Saved
+2020-05-25 11:14:17[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:09:11[0051],theme river chart Saved
+2020-05-25 11:09:11[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:06:26[0051],theme river chart Saved
+2020-05-25 11:06:26[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:06:10[0051],theme river chart Saved
+2020-05-25 11:06:10[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:05:50[0051],theme river chart Saved
+2020-05-25 11:05:50[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:05:27[0051],theme river chart Saved
+2020-05-25 11:05:27[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:04:57[0051],theme river chart Saved
+2020-05-25 11:04:57[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:03:27[0051],theme river chart Saved
+2020-05-25 11:03:27[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:01:33[0051],theme river chart Saved
+2020-05-25 11:01:33[0041],chart_cov_daily_increasement Saved
+2020-05-25 11:01:00[0051],theme river chart Saved
+2020-05-25 11:01:00[0041],chart_cov_daily_increasement Saved
+2020-05-25 10:59:41[0041],chart_cov_daily_increasement Saved
+2020-05-25 10:59:33[0041],chart_cov_daily_increasement Saved
+2020-05-25 10:59:21[0051],theme river chart Saved
+2020-05-25 10:57:18[0051],theme river chart Saved
+2020-05-25 10:57:18[0041],chart_cov_daily_increasement Saved
+2020-05-25 10:56:36[0051],theme river chart Saved
+2020-05-25 10:56:36[0041],chart_cov_daily_increasement Saved
+2020-05-25 10:56:07[0051],theme river chart Saved
+2020-05-25 10:56:07[0041],chart_cov_daily_increasement Saved
+2020-05-25 10:55:57[0051],theme river chart Saved
+2020-05-25 10:55:57[0041],chart_cov_daily_increasement Saved
+2020-05-25 10:55:38[0051],theme river chart Saved
+2020-05-25 10:55:38[0041],chart_cov_daily_increasement Saved
+2020-05-25 10:54:56[0051],theme river chart Saved
+2020-05-25 10:54:56[0041],chart_cov_daily_increasement Saved
+2020-05-25 10:54:40[0051],theme river chart Saved
+2020-05-25 10:54:40[0041],chart_cov_daily_increasement Saved
+2020-05-25 10:54:00[0051],theme river chart Saved
+2020-05-25 10:54:00[0041],chart_cov_daily_increasement Saved
+2020-05-25 10:51:52[0051],theme river chart Saved
+2020-05-25 10:51:52[0041],chart_cov_daily_increasement Saved
+2020-05-25 10:51:27[0051],theme river chart Saved
+2020-05-25 10:51:27[0041],chart_cov_daily_increasement Saved
+2020-05-25 10:51:12[0051],theme river chart Saved
+2020-05-25 10:51:12[0041],chart_cov_daily_increasement Saved
+2020-05-21 17:04:17[0051],theme river chart Saved
+2020-05-21 17:04:17[0041],chart_cov_daily_increasement Saved
+2020-05-21 17:03:53[0051],theme river chart Saved
+2020-05-21 17:03:53[0041],chart_cov_daily_increasement Saved
+2020-05-21 15:35:25[0051],theme river chart Saved
+2020-05-21 15:35:25[0041],chart_cov_daily_increasement Saved
+2020-05-21 15:35:08[0051],theme river chart Saved
+2020-05-21 15:35:08[0041],chart_cov_daily_increasement Saved
+2020-05-21 15:34:50[0051],theme river chart Saved
+2020-05-21 15:34:50[0041],chart_cov_daily_increasement Saved
+2020-05-21 15:34:28[0051],theme river chart Saved
+2020-05-21 15:34:28[0041],chart_cov_daily_increasement Saved
+2020-05-21 15:34:18[0051],theme river chart Saved
+2020-05-21 15:34:18[0041],chart_cov_daily_increasement Saved
+2020-05-21 15:21:34[0051],theme river chart Saved
+2020-05-21 15:21:34[0041],chart_cov_daily_increasement Saved
+2020-05-21 15:20:58[0051],theme river chart Saved
+2020-05-21 15:20:58[0041],chart_cov_daily_increasement Saved
+2020-05-21 15:17:47[0051],theme river chart Saved
+2020-05-21 15:17:47[0041],chart_cov_daily_increasement Saved
+2020-05-21 15:16:37[0051],theme river chart Saved
+2020-05-21 15:16:37[0041],chart_cov_daily_increasement Saved
+2020-05-21 15:15:52[0051],theme river chart Saved
+2020-05-21 15:15:52[0041],chart_cov_daily_increasement Saved
+2020-05-12 17:34:56[0051],theme river chart Saved
+2020-05-12 17:34:56[0041],chart_cov_daily_increasement Saved
+2020-05-12 17:34:56[0061],Get daily new data
+2020-05-12 17:32:28[0051],theme river chart Saved
+2020-05-12 17:32:28[0041],chart_cov_daily_increasement Saved
+2020-05-12 17:32:28[0061],Get daily new data
+2020-05-12 17:24:45[0051],theme river chart Saved
+2020-05-12 17:24:45[0041],chart_cov_daily_increasement Saved
+2020-05-12 17:24:45[0061],Get daily new data
+2020-05-12 17:20:28[0051],theme river chart Saved
+2020-05-12 17:20:28[0041],chart_cov_daily_increasement Saved
+2020-05-12 17:20:28[0061],Get daily new data
+2020-05-12 17:02:48[0051],theme river chart Saved
+2020-05-12 17:02:48[0041],chart_cov_daily_increasement Saved
+2020-05-12 17:02:48[0061],Get daily new data
+2020-05-12 17:02:02[0051],theme river chart Saved
+2020-05-12 17:02:02[0041],chart_cov_daily_increasement Saved
+2020-05-12 17:02:02[0061],Get daily new data
+2020-05-12 17:01:57[0051],theme river chart Saved
+2020-05-12 17:01:57[0041],chart_cov_daily_increasement Saved
+2020-05-12 17:01:57[0061],Get daily new data
+2020-05-12 16:58:12[0061],Get daily new data
+2020-05-06 12:08:02[0051],theme river chart Saved
+2020-05-06 12:08:02[0041],chart_cov_daily_increasement Saved
+2020-05-06 12:08:02[0061],Get daily new data
+2020-05-06 12:06:31[0051],theme river chart Saved
+2020-05-06 12:06:31[0041],chart_cov_daily_increasement Saved
+2020-05-06 12:06:31[0061],Get daily new data
+2020-05-06 12:05:36[0061],Get daily new data
+2020-05-06 12:05:21[0061],Get daily new data
+2020-05-06 12:04:52[0051],theme river chart Saved
+2020-05-06 12:04:52[0041],chart_cov_daily_increasement Saved
+2020-05-06 12:04:52[0061],Get daily new data
+2020-05-06 12:04:32[0061],Get daily new data
+2020-05-06 12:03:11[0051],theme river chart Saved
+2020-05-06 12:03:11[0041],chart_cov_daily_increasement Saved
+2020-05-06 12:03:11[0061],Get daily new data
+2020-05-06 12:02:48[0061],Get daily new data
+2020-05-06 12:02:18[0061],Get daily new data
+2020-05-06 12:01:33[0061],Get daily new data
+2020-05-06 12:00:19[0061],Get daily new data
+2020-05-06 11:58:41[0061],Get daily new data
+2020-04-19 16:50:42[0031],China Map Saved
+2020-04-19 16:50:42[0021],get data from Tencent news
+2020-04-19 16:50:42[0011],Successfully save today's data
+2020-04-05 10:06:39[0051],theme river chart Saved
+2020-04-05 10:06:39[0041],chart_cov_daily_increasement Saved
+2020-04-05 10:06:39[0061],Get daily new data
+2020-04-05 09:59:17[0061],Get daily new data
+2020-03-29 22:28:30[0031],China Map Saved
+2020-03-29 22:28:30[0021],get data from Tencent news
+2020-03-29 22:28:30[0011],Successfully save today's data
+2020-03-29 22:15:18[0031],China Map Saved
+2020-03-29 22:15:18[0021],get data from Tencent news
+2020-03-29 22:15:18[0011],Successfully save today's data
+2020-03-29 22:11:23[0031],China Map Saved
+2020-03-29 22:11:23[0021],get data from Tencent news
+2020-03-29 22:11:23[0011],Successfully save today's data
+2020-03-29 22:11:04[0031],China Map Saved
+2020-03-29 22:11:04[0021],get data from Tencent news
+2020-03-29 22:11:04[0011],Successfully save today's data
+2020-03-29 22:10:33[0031],China Map Saved
+2020-03-29 22:10:33[0021],get data from Tencent news
+2020-03-29 22:10:33[0011],Successfully save today's data
+2020-03-29 21:45:50[0031],China Map Saved
+2020-03-29 21:45:50[0021],get data from Tencent news
+2020-03-29 21:45:50[0011],Successfully save today's data
+2020-03-29 21:32:49[0061],Get daily new data
+2020-03-29 21:01:32[0051],theme river chart Saved
+2020-03-29 21:01:32[0041],chart_cov_daily_increasement Saved
+2020-03-29 21:01:32[0061],Get daily new data
+2020-03-29 20:56:25[0051],theme river chart Saved
+2020-03-29 20:56:25[0041],chart_cov_daily_increasement Saved
+2020-03-29 20:56:25[0061],Get daily new data
+2020-03-29 20:55:43[0031],China Map Saved
+2020-03-29 20:55:43[0021],get data from Tencent news
+2020-03-29 20:55:43[0011],Successfully save today's data

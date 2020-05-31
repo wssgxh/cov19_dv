@@ -99,51 +99,51 @@ Theme by: WebThemez.com
 			<a href="http://127.0.0.1:8000/covid_daily_increasement">click</a>
 			<P></P>
 			<p>Entery a range to customize your chart  </p>
-			
+
 			<form method="POST" >
 			{% csrf_token %}
 			<p class="chart-increasement-input"><input type="text" name="increasement_from_date" size="16" placeholder="From(YYYY-MM-DD)" value=""><input type="text" name="increasement_to_date" size="16" placeholder="To(YYYY-MM-DD)" value=""><input type="submit" value="Submit" name="increasement_Submit"  style="background-color: #f05b5d;color: #FFFFFF"></p>
 			</form>
-			
-			
-            <!--features 1 end--> 
+
+
+            <!--features 1 end-->
           </div>
         </div>
         <div class="featuresPro">
-    
-     
-	 
-	 
+
+
+
+
         </div>
       </div>
       <div class="col-md-6">
         <div class="featuresPro">
 		<div class="col-md-3 col-sm-3 col-xs-3 text-center icon"><i class="icon-genius"></i></div>
-          <div class="col-md-9 col-sm-9 col-xs-9"> 
+          <div class="col-md-9 col-sm-9 col-xs-9">
             <!--features 2-->
             <h4>Daily Update in River Theme</h4>
             <p>A River Theme chart to show “Confirme”，“Suspecet”,"dead" and "heal" in river theme </p>
-			
+
 			<a href="http://127.0.0.1:8000/covid_daily_update_themeRiver/">click</a>
 			<P></P>
 			<p>Entery a range to customize your chart  </p>
-			
-			
+
+
 			<form method="POST" >
 			{% csrf_token %}
 			<p class="chart-themeRiver-input"><input type="text" name="themeRiver_from_date" size="14" placeholder="From(YYYY-MM-DD)" value=""><input type="text" name="themeRiver_to_date" size="14" placeholder="To(YYYY-MM-DD)" value=""><input type="submit" value="Submit" name="themeRiver_Submit"  style="background-color: #f05b5d;color: #FFFFFF"></p>
 			</form>
-				
-				<!--features 2 end--> 
+
+				<!--features 2 end-->
 			  </div>
 
         </div>
       </div>
     </div>
   </div>
-  
-  
-  
+
+
+
 
 
 
@@ -154,19 +154,19 @@ Theme by: WebThemez.com
 <section class="subscribe spacing">
 <div class="container">
 
-<div id="subscribe">  
+<div id="subscribe">
 <h3>Download source date From 2020-02-12 to Today </h3>
 	<form method="POST" >
         {% csrf_token %}
-		
+
 
 		<p class="subscribe-input"><input type="text" name="source_data_from_date" size="10" placeholder="From(YYYY-MM-DD)" value=""><input type="text" name="source_data_to_date" size="10" placeholder="To(YYYY-MM-DD)" value=""><input type="submit" value="Submit" name="Submit"></p>
 
-		
+
 	</form>
 
 </div>
- 
+
 </div>
 </section>
 

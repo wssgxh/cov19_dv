@@ -1,0 +1,1 @@
+{'date': '2020_05_14', 'Active Cases': 'Active Cases#\xa0', 'Discharged': 'Discharged', 'Discharge to Isolation': '19479', 'Hospitalised (Stable)': '1018', 'Hospitalised (Critical)': '19', 'Deaths': '21'}

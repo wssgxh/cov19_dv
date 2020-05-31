@@ -8,9 +8,13 @@ from shutil import copyfile
 # https://www.jianshu.com/p/e9dcfa2d7d65
 # https://www.jianshu.com/p/c596d353a69e?utm_source=oschina-app
 
-
-system_variables_path = "E:\云\OneDrive\code\python\cov19_dv\\"
-#system_variables_path = "/home/ec2-user/cov19_dv/"
+sys = platform.system()
+if sys == "Windows":
+    system_variables_path = "E:\云\OneDrive\code\python\cov19_dv\\"
+    Django_variables_path = "\\Django - web\\templates\\"
+elif sys == "Linux":
+    system_variables_path = "/home/ec2-user/cov19_dv/"
+    Django_variables_path = "Django - web/templates/"
 
 def system_varables():
     variables = {}
@@ -113,13 +117,11 @@ def chart_covid_themeRiver(output_file_config,file_counter, result_date, result_
 
 def get_daily_increment():
 
-    # dirpath = "source_data/Tencent_news"
-    #
-    # sys = platform.system()
-    # if sys == "Windows":
-    #     dirpath = "source_data\Tencent_news"
-    # elif sys == "Linux":
-    #     dirpath = "source_data/Tencent_news"
+    sys = platform.system()
+    if sys == "Windows":
+        dirpath = "source_data\Tencent_news"
+    elif sys == "Linux":
+        dirpath = "source_data/Tencent_news"
 
     file_counter = 0
 
@@ -134,7 +136,7 @@ def get_daily_increment():
     before = 0
     after = 0
 
-    for root, dirs, files in os.walk(system_variables_path+"source_data\Tencent_news"):
+    for root, dirs, files in os.walk(system_variables_path+dirpath):
 
         files.sort()
         print(files)
@@ -169,9 +171,9 @@ def get_daily_increment():
 
     output_file_config = {
         'covid_daily_increasement': {'file_name': "covid_daily_increasement.html",
-                                     'output_path': system_variables_path + "\\Django - web\\templates\\", 'enable': True},
+                                     'output_path': system_variables_path + Django_variables_path, 'enable': True},
         'covid_daily_update_themeRiver': {'file_name': "covid_daily_update_themeRiver.html",
-                                          'output_path': system_variables_path + "\\Django - web\\templates\\", 'enable': True}
+                                          'output_path': system_variables_path + Django_variables_path, 'enable': True}
     }
 
     chart_covid_daily_increasement(output_file_config,result_date, result_increasement, result_confirm)
@@ -180,11 +182,11 @@ def get_daily_increment():
 def get_daily_increment_from_variables(from_date,to_date,output_file_config):
 
 
-    # sys = platform.system()
-    # if sys == "Windows":
-    #     dirpath = "source_data\Tencent_news"
-    # elif sys == "Linux":
-    #     dirpath = "source_data/Tencent_news"
+    sys = platform.system()
+    if sys == "Windows":
+        dirpath = "source_data\Tencent_news"
+    elif sys == "Linux":
+        dirpath = "source_data/Tencent_news"
 
     file_counter = 0
 

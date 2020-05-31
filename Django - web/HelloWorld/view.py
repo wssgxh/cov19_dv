@@ -1,4 +1,4 @@
-import os,datetime,sys
+import os,datetime,sys,platform
 sys.path.append("E:\云\OneDrive\code\python\cov19_dv")
 sys.path.append("/home/ec2-user/cov19_dv/")
 from django.shortcuts import render,HttpResponse
@@ -7,7 +7,13 @@ from django.http import HttpResponse, Http404, StreamingHttpResponse,FileRespons
 
 from functions import system_varables,subscription_save,subscription_load,download_file,get_daily_increment_from_variables,chart_covid_themeRiver,chart_covid_daily_increasement
 
-system_variables_path = "E:\云\OneDrive\code\python\cov19_dv\\"
+sys = platform.system()
+if sys == "Windows":
+    system_variables_path = "E:\云\OneDrive\code\python\cov19_dv\\"
+    Django_variables_path = "\\Django - web\\templates\\"
+elif sys == "Linux":
+    system_variables_path = "/home/ec2-user/cov19_dv/"
+    Django_variables_path = "Django - web/templates/"
 
 def system_varables():
 
@@ -91,7 +97,7 @@ def index(request):
              '''
             output_file_config = {
                 'covid_daily_increasement': {'file_name': "covid_daily_increasement.html_customized.html",
-                                             'output_path': system_variables_path + "\\Django - web\\templates\\",
+                                             'output_path': system_variables_path +Django_variables_path,
                                              'enable': True}
             }
 
@@ -119,7 +125,7 @@ def index(request):
              '''
             output_file_config = {
                 'covid_daily_update_themeRiver': {'file_name': "covid_daily_update_themeRiver_customized.html",
-                                                      'output_path': system_variables_path + "\\Django - web\\templates\\", 'enable': True}
+                                                      'output_path': system_variables_path + Django_variables_path, 'enable': True}
                 }
 
 

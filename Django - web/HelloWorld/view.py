@@ -44,6 +44,9 @@ def china_map(request):
 def covid_daily_update_themeRiver(request):
     return render(request, 'covid_daily_update_themeRiver.html')
 
+def covid_bar_char_race(request):
+    return render(request, 'covid_cases_by_China_province.html')
+
 def index(request):
 
     context = {}

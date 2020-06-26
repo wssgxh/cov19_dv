@@ -1,32 +1,34 @@
-import json,requests,time,os
-from bs4 import BeautifulSoup
+import pandas as pd
+import bar_chart_race as bcr
 
-path = "source_data/MOH_webpage/" + str(time.strftime("%Y_%m_%d", time.localtime())) + '.txt'
-url = "https://www.moh.gov.sg/covid-19"
+import time
+import datetime
 
-data = requests.get(url)
-soup= BeautifulSoup(data.content, "html5lib")
+#<img style="width:100%;" src="static/images/COVID-19_cases_by_China_province.gif" align="middle" />
 
-#print(soup)
+start = datetime.datetime.now()
 
-div_dict = {'Active Cases':'ContentPlaceHolder_contentPlaceholder_C072_Col00',
-            'Discharged':'ContentPlaceHolder_contentPlaceholder_C072_Col01',
-            'Discharge to Isolation':'ContentPlaceHolder_contentPlaceholder_C073_Col00',
-            'Hospitalised (Stable)':'ContentPlaceHolder_contentPlaceholder_C073_Col01',
-            'Hospitalised (Critical)':'ContentPlaceHolder_contentPlaceholder_C073_Col02',
-            'Deaths':'ContentPlaceHolder_contentPlaceholder_C073_Col03'
-            }
+index_dict = {'covid19_tutorial': 'date',
+                  'covid19': 'date',
+                  'urban_pop': 'year',
+                  'baseball': None}
+# print(index_dict)
 
-result_dict = {}
-result_dict['date'] = time.strftime("%Y_%m_%d", time.localtime())
+index_col = index_dict["covid19"]
+parse_dates = [index_col] if index_col else None
+print(index_col)
+#abc = pd.read_csv("covid19_tutorial.csv", index_col=index_col, parse_dates=parse_dates)
+abc = pd.read_csv("china_covid19.csv", index_col=index_col, parse_dates=parse_dates)
 
-for key in (div_dict.keys()):
 
-    data = soup.find('div',id=div_dict[key]).b.get_text().replace(',',"")
-    result_dict[key] = data
+df = pd.read_csv("china_covid19.csv", index_col=index_col, parse_dates=parse_dates)
+bcr.bar_chart_race(
+    df=df,
+    filename='covid19_cases_by_China_province.gif',
 
-print(result_dict)
+    title='COVID-19 cases by China province')
 
-f = open(path, mode='w', encoding="utf-8")
-f.write(str(result_dict))
-f.close()
+
+end = datetime.datetime.now()
+
+print((end - start).seconds)

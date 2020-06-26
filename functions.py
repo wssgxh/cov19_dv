@@ -5,16 +5,21 @@ from pyecharts import Line
 from pyecharts import ThemeRiver, Page
 from shutil import copyfile
 
+import pandas as pd
+import bar_chart_race as bcr
+
 # https://www.jianshu.com/p/e9dcfa2d7d65
 # https://www.jianshu.com/p/c596d353a69e?utm_source=oschina-app
 
 sys = platform.system()
 if sys == "Windows":
     system_variables_path = "E:\云\OneDrive\code\python\cov19_dv\\"
-    Django_variables_path = "\\Django - web\\templates\\"
+    Django_variables_path = "Django - web/templates/"
+    Django_static_path = "Django - web/static/images/"
 elif sys == "Linux":
     system_variables_path = "/home/ec2-user/cov19_dv/"
-    Django_variables_path = "Django - web/templates/"
+    Django_variables_path = "\\Django - web\\templates\\"
+    Django_static_path = "\\Django - web\\static\\images\\"
 
 def system_varables():
     variables = {}
@@ -400,16 +405,133 @@ def send_email(subject,body,receiver_email):
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, text)
 
+# def change_chinese_province_name_to_english(words):
+#
+#     result = ""
+#     for word in words:
+#         temp = Pinyin().get_pinyin(word).capitalize()
+#         result += temp
+#
+#     if result.lower() == "xizang" : result = "Tibet"
+#
+#     return result
+
+def bar_chart_race():
+
+    sys = platform.system()
+    if sys == "Windows":
+        dirpath = "source_data\Tencent_news"
+    elif sys == "Linux":
+        dirpath = "source_data/Tencent_news"
+
+    result = dict()
+    temp = dict()
+
+    for root, dirs, files in os.walk(system_variables_path+dirpath):
+
+        files.sort()
+        #print(files)
+
+        for file in files:
+
+            #print (file.replace('.txt',''))
+
+            if '.txt' not in os.path.join(root, file): continue
+            with open(os.path.join(root, file), "r", encoding='utf-8') as f:
+                data = json.loads(f.read())
+
+                for item in data['areaTree'][0]['children']:
+                    if item['name'] not in temp:
+                        temp.update({item['name']: 0})
+                    for city in item['children']:
+                        temp[item['name']] = int(city['total']['confirm']) + temp[item['name']]
+
+
+            result[file.replace('.txt','')] = temp
+
+            temp = dict()
+
+
+
+
+    result_in_df  =pd.DataFrame(columns=('date','湖北', '广东' ,'河南', '浙江', '湖南', '安徽', '江西', '江苏', '重庆', '山东', '四川', '黑龙江', '北京', '上海', '福建', '河北', '陕西', '广西', '海南', '云南', '贵州', '山西', '辽宁', '天津', '甘肃', '吉林', '内蒙古', '新疆', '宁夏', '香港', '台湾', '青海','澳门', '西藏'))
+
+
+    pd.set_option('display.max_columns', None)
+    pd.set_option('display.max_rows', None)
+
+    for day in result:
+        result[day]['date'] = day.replace('_','-')
+        temp = pd.DataFrame([result[day]])
+        result_in_df = result_in_df.append(temp)
+
+    result_in_df['date'] = pd.to_datetime(result_in_df['date'])
+
+    # result_in_df.set_index(["date"], inplace=True)
+    # result_in_df = pd.DataFrame(result_in_df, dtype= 'int64')
+
+    #result_in_df.rename(columns={'湖北':'Hubei', '广东':'Guangdong' ,'河南':'Henan', '浙江':'Zhejiang', '湖南':'Hunan', '安徽':'Anhui', '江西':'Jiangxi', '江苏':'Jiangsu', '重庆':'Chongqing', '山东':'Shandong', '四川':'Sichuan','黑龙江':'Heilongjiang', '北京':'Beijing', '上海':'Shanghai', '福建':'Fujian', '河北':'Hebei', '陕西':'Shanxi', '广西':'Guangxi', '海南':'Hainan','云南':'Yunnan',  '贵州':'Guizhou', '山西':'Shanxi', '辽宁':'Liaoning', '天津':'Tianjing', '甘肃':'Gansu', '吉林':'Jiling', '内蒙古':'Inner Mongolia', '新疆':'Xinjiang', '宁夏':'Ningxia', '香港':'Xianggang', '台湾':'Taiwan', '青海':'Qinghai','澳门':'Macao', '西藏':'Tibet'}, inplace = True)
+    result_in_df.rename(
+        columns={'湖北': 'HuBei', '广东': 'GuangDong', '河南': 'HeNan', '浙江': 'ZheJiang', '湖南': 'HuNan', '安徽': 'AnHui',
+                 '江西': 'JiangXi', '江苏': 'JiangSu', '重庆': 'ChongQing', '山东': 'ShanDong', '四川': 'SicHuan',
+                 '黑龙江': 'HeiLongJiang', '北京': 'BeiJing', '上海': 'ShangHai', '福建': 'FuJian', '河北': 'HeBei',
+                 '陕西': 'ShanXi', '广西': 'GuangXi', '海南': 'HaiNan', '云南': 'YunNan', '贵州': 'GuiZhou', '山西': 'ShanXi',
+                 '辽宁': 'LiaoNing', '天津': 'TianJing', '甘肃': 'GanSu', '吉林': 'JiLing', '内蒙古': 'Inner Mongolia',
+                 '新疆': 'XinJiang', '宁夏': 'NingXia', '香港': 'XiangGang', '台湾': 'TaiWan', '青海': 'QingHai', '澳门': 'Macao',
+                 '西藏': 'Tibet'}, inplace=True)
+
+    # print(result_in_df)
+    # print(result_in_df.info())
+
+    result_in_df.to_csv("covid19_cases_by_China_province.csv")
+
+    # read csv to build bar chart race
+
+    start = datetime.datetime.now()
+
+    index_dict = {'covid19_tutorial': 'date',
+                  'covid19': 'date',
+                  'urban_pop': 'year',
+                  'baseball': None}
+    # print(index_dict)
+
+    index_col = index_dict["covid19"]
+    parse_dates = [index_col] if index_col else None
+
+    pd.set_option('display.max_columns', None)
+    pd.set_option('display.max_rows', None)
+    df = pd.read_csv("covid19_cases_by_China_province.csv", index_col=index_col, parse_dates=parse_dates)
+
+    print (df)
+
+    bcr.bar_chart_race(
+        df=df,
+        filename=   Django_static_path  + 'covid19_cases_by_China_province.gif',
+        title='COVID-19 cases by China province',
+        steps_per_period = 10,
+        period_length=500,
+        bar_size = 0.8,
+        bar_label_size = 5
+
+    )
+
+    end = datetime.datetime.now()
+
+    print("Done ,create bar chart race consumed " + str ((end - start).seconds)  + ' seconds , data has been saved in ' + Django_static_path  + 'covid19_cases_by_China_province.gif')
+
+
+
+
 
 if __name__ == '__main__':
-
 
     '''
     Daily Tasks
     
     '''
 	# create charts
-    get_daily_increment()
+
+    #get_daily_increment()
 
     #copy_result_to_django()
 
@@ -423,7 +545,4 @@ if __name__ == '__main__':
     Test
     
     '''
-    #data = get_daily_increment()
-    #subscription_save("xinghe","shanggu123anxinghe@gmail.com","daily")
-    #print(subscription_load())
-    #download_file('2020-02-10','2020-02-18')
+    bar_chart_race()

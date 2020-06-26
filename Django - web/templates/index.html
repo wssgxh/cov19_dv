@@ -40,6 +40,9 @@ Theme by: WebThemez.com
 
 <img style="width:100%;" src="static/images/CHLA-What-You-Should-Know-Covid-19-1200x628-01.jpg" width="1920" height="1080" align="middle" />
 
+
+
+
 <body id="home">
 <section class="main">
 <div id="subscribe" class="wrapper topSection">
@@ -53,7 +56,11 @@ Theme by: WebThemez.com
 
 <div class="countdown styled"><html><h1>The COVID-19 Have been alive for {{ days_of_cov_19 }} days</h1>
 <h3>The World Health Organization (WHO) declared the 2019–20 coronavirus outbreak a Public Health Emergency of International Concern (PHEIC) on 30 January 2020 </h3>
-</div> 
+
+</div>
+
+	<img style="width:100%;" src="static/images/covid19_cases_by_China_province.gif" align="middle" />
+
 
 </section>
 <section class="subscribe spacing">
@@ -98,11 +105,11 @@ Theme by: WebThemez.com
             <p>A Line Chart to show the daily confirmed cases in daily vs total</p>
 			<a href="http://127.0.0.1:8000/covid_daily_increasement">click</a>
 			<P></P>
-			<p>Entery a range to customize your chart  </p>
+			<p>Enter a range to customize your chart  </p>
 
-			<form method="POST" >
+		<form method="POST" >
 			{% csrf_token %}
-			<p class="chart-increasement-input"><input type="text" name="increasement_from_date" size="16" placeholder="From(YYYY-MM-DD)" value=""><input type="text" name="increasement_to_date" size="16" placeholder="To(YYYY-MM-DD)" value=""><input type="submit" value="Submit" name="increasement_Submit"  style="background-color: #f05b5d;color: #FFFFFF"></p>
+			<p class="chart-increasement-input"><input type="text" name="increasement_from_date" size="16" style="color:#000000" placeholder="From(YYYY-MM-DD)" value=""><input type="text" name="increasement_to_date" size="16" style="color:#000000" placeholder="To(YYYY-MM-DD)" value=""><input type="submit" value="Submit" name="increasement_Submit"  style="background-color: #f05b5d;color: #FFFFFF"></p>
 			</form>
 
 
@@ -124,14 +131,14 @@ Theme by: WebThemez.com
             <h4>Daily Update in River Theme</h4>
             <p>A River Theme chart to show “Confirme”，“Suspecet”,"dead" and "heal" in river theme </p>
 
-			<a href="http://127.0.0.1:8000/covid_daily_update_themeRiver/">click</a>
+			<a href="http://18.208.183.153:8000/covid_daily_update_themeRiver/">click</a>
 			<P></P>
-			<p>Entery a range to customize your chart  </p>
+			<p>Enter a range to customize your chart  </p>
 
 
 			<form method="POST" >
 			{% csrf_token %}
-			<p class="chart-themeRiver-input"><input type="text" name="themeRiver_from_date" size="14" placeholder="From(YYYY-MM-DD)" value=""><input type="text" name="themeRiver_to_date" size="14" placeholder="To(YYYY-MM-DD)" value=""><input type="submit" value="Submit" name="themeRiver_Submit"  style="background-color: #f05b5d;color: #FFFFFF"></p>
+			<p class="chart-themeRiver-input"><input type="text" name="themeRiver_from_date" size="14" style="color:#000000" placeholder="From(YYYY-MM-DD)" value=""><input type="text" name="themeRiver_to_date" size="14" style="color:#000000" placeholder="To(YYYY-MM-DD)" value=""><input type="submit" value="Submit" name="themeRiver_Submit"  style="background-color: #f05b5d;color: #FFFFFF"></p>
 			</form>
 
 				<!--features 2 end-->

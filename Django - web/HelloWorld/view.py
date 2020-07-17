@@ -1,5 +1,5 @@
 import os,datetime,sys,platform
-sys.path.append("E:\云\OneDrive\code\python\cov19_dv")
+sys.path.append("E:\OneDrive\code\python\cov19_dv")
 sys.path.append("/home/ec2-user/cov19_dv/")
 from django.shortcuts import render,HttpResponse
 from django.contrib import messages
@@ -9,7 +9,7 @@ from functions import system_varables,subscription_save,subscription_load,downlo
 
 sys = platform.system()
 if sys == "Windows":
-    system_variables_path = "E:\云\OneDrive\code\python\cov19_dv\\"
+    system_variables_path = "E:\OneDrive\code\python\cov19_dv\\"
     Django_variables_path = "\\Django - web\\templates\\"
 elif sys == "Linux":
     system_variables_path = "/home/ec2-user/cov19_dv/"
@@ -43,9 +43,6 @@ def china_map(request):
 
 def covid_daily_update_themeRiver(request):
     return render(request, 'covid_daily_update_themeRiver.html')
-
-def covid_bar_char_race(request):
-    return render(request, 'covid_cases_by_China_province.html')
 
 def index(request):
 
@@ -99,13 +96,13 @@ def index(request):
              enable : True = file will created , false = file will not be created  
              '''
             output_file_config = {
-                'covid_daily_increasement': {'file_name': "covid_daily_increasement.html_customized.html",
+                'covid_daily_increasement': {'file_name': "covid_daily_increasement_customized.html",
                                              'output_path': system_variables_path +Django_variables_path,
                                              'enable': True}
             }
 
             get_daily_increment_from_variables(From_date,To_date,output_file_config)
-            return render(request , 'covid_daily_increasement.html_customized.html')
+            return render(request , 'covid_daily_increasement_customized.html')
 
         except IndexError:
             return HttpResponse("No Data")
@@ -187,4 +184,9 @@ def covid_daily_update_themeRiver_customized():
 
 if __name__ == '__main__':
 
-    get_daily_increment_from_variables("2020_02_12", "2020_02_28","../../source_data/Tencent_news")
+
+    output_file_config = {
+        'covid_daily_increasement': {'file_name': "covid_daily_increasement_customized.html",
+                                     'output_path': system_variables_path + Django_variables_path, 'enable': True}
+    }
+    get_daily_increment_from_variables("2020_02_12", "2020_02_28",output_file_config)

@@ -1,6 +1,6 @@
 import time, datetime
 import os, platform
-import json,zipfile
+import json,zipfile,paramiko
 from pyecharts import Line
 from pyecharts import ThemeRiver, Page
 from shutil import copyfile
@@ -13,7 +13,7 @@ import bar_chart_race as bcr
 
 sys = platform.system()
 if sys == "Windows":
-    system_variables_path = "E:\云\OneDrive\code\python\cov19_dv\\"
+    system_variables_path = "E:\OneDrive\code\python\cov19_dv\\"
     Django_variables_path = "Django - web/templates/"
     Django_static_path = "Django - web/static/images/"
 elif sys == "Linux":
@@ -73,8 +73,10 @@ def chart_covid_daily_increasement(output_file_config,result_date, result_increa
     line.add("total confirmed case ", attr, result_confirmed, is_fill=True, line_opacity=0.2, area_opacity=0.4,
              legend_pos="70%")
 
-    line.render(output_file_config["covid_daily_increasement"]["output_path"] + output_file_config["covid_daily_increasement"]["file_name"])
-    log("0041", None, "chart_cov_daily_increasement Saved")
+    file_output_path = output_file_config["covid_daily_increasement"]["output_path"] + output_file_config["covid_daily_increasement"]["file_name"]
+    line.render(file_output_path)
+
+    log("0041", None, "chart_cov_daily_increasement Saved in " + file_output_path)
 
 
 def chart_covid_themeRiver(output_file_config,file_counter, result_date, result_confirm, result_suspect, result_dead, result_heal):
@@ -117,7 +119,10 @@ def chart_covid_themeRiver(output_file_config,file_counter, result_date, result_
     chart.add(cov_item, result, is_label_show=True, legend_pos='70%')
     page.add(chart)
 
-    page.render(output_file_config["covid_daily_update_themeRiver"]["output_path"] + output_file_config["covid_daily_update_themeRiver"]["file_name"])
+    file_output_path = output_file_config["covid_daily_update_themeRiver"]["output_path"] + output_file_config["covid_daily_update_themeRiver"]["file_name"]
+    page.render(file_output_path)
+    log("0041", None, "covid_daily_update_themeRiver Saved in " + file_output_path)
+
 
 
 def get_daily_increment():
@@ -187,11 +192,6 @@ def get_daily_increment():
 def get_daily_increment_from_variables(from_date,to_date,output_file_config):
 
 
-    sys = platform.system()
-    if sys == "Windows":
-        dirpath = "source_data\Tencent_news"
-    elif sys == "Linux":
-        dirpath = "source_data/Tencent_news"
 
     file_counter = 0
 
@@ -206,16 +206,12 @@ def get_daily_increment_from_variables(from_date,to_date,output_file_config):
     before = 0
     after = 0
 
-
-
     for root, dirs, files in os.walk(system_variables_path):
 
         files.sort()
         #print("files:",files)
 
         for file in files:
-
-
 
             if '.txt' not in os.path.join(root, file): continue
             if file.replace('.txt','') < from_date or file.replace('.txt','') > to_date :continue
@@ -224,7 +220,13 @@ def get_daily_increment_from_variables(from_date,to_date,output_file_config):
             #print(file.replace('.txt', ''))
 
 
+
             with open(os.path.join(root, file), "r", encoding='utf-8') as f:
+
+                # try:
+                #     data = json.loads(f.read())
+                # except:
+                #     print(file)
                 data = json.loads(f.read())
 
                 result_confirm.append(data['chinaTotal']['confirm'])
@@ -416,13 +418,37 @@ def send_email(subject,body,receiver_email):
 #
 #     return result
 
+def send_file_to_aws(file_path,destination):
+    hostname = 'ec2-18-208-183-153.compute-1.amazonaws.com'
+    myuser   = 'ec2-user'
+    mySSHK   = "E:\\OneDrive\\admin\\FYP\\xinghefyp_studnet_account_converted.ppk"
+
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect(hostname = hostname, username=myuser, key_filename=mySSHK)
+
+    sftp = ssh.open_sftp()
+
+    sftp.put(file_path, destination)
+
+    # stdin, stdout, stderr = ssh.exec_command('ls')
+    # print (stdout.readlines())
+    ssh.close()
+    print('file has been transferred to aws')
+
 def bar_chart_race():
+
 
     sys = platform.system()
     if sys == "Windows":
         dirpath = "source_data\Tencent_news"
     elif sys == "Linux":
+        print('system is aws, it can not support this function, system exit')
+        return 0
         dirpath = "source_data/Tencent_news"
+
+
+
 
     result = dict()
     temp = dict()
@@ -438,14 +464,17 @@ def bar_chart_race():
 
             if '.txt' not in os.path.join(root, file): continue
             with open(os.path.join(root, file), "r", encoding='utf-8') as f:
-                data = json.loads(f.read())
+
+                try:
+                    data = json.loads(f.read())
+                except:
+                    print(file)
 
                 for item in data['areaTree'][0]['children']:
                     if item['name'] not in temp:
                         temp.update({item['name']: 0})
                     for city in item['children']:
                         temp[item['name']] = int(city['total']['confirm']) + temp[item['name']]
-
 
             result[file.replace('.txt','')] = temp
 
@@ -502,13 +531,13 @@ def bar_chart_race():
     pd.set_option('display.max_rows', None)
     df = pd.read_csv("covid19_cases_by_China_province.csv", index_col=index_col, parse_dates=parse_dates)
 
-    print (df)
+    #print (df)
 
     bcr.bar_chart_race(
         df=df,
         filename=   Django_static_path  + 'covid19_cases_by_China_province.gif',
         title='COVID-19 cases by China province',
-        steps_per_period = 10,
+        steps_per_period = 3,
         period_length=500,
         bar_size = 0.8,
         bar_label_size = 5
@@ -519,7 +548,8 @@ def bar_chart_race():
 
     print("Done ,create bar chart race consumed " + str ((end - start).seconds)  + ' seconds , data has been saved in ' + Django_static_path  + 'covid19_cases_by_China_province.gif')
 
-
+    send_file_to_aws(r'E:\OneDrive\code\python\cov19_dv\Django - web\static\images\covid19_cases_by_China_province.gif',
+                     '/home/ec2-user/cov19_dv/Django - web/static/images/covid19_cases_by_China_province.gif')
 
 
 
@@ -533,7 +563,6 @@ if __name__ == '__main__':
 
     #get_daily_increment()
 
-    #copy_result_to_django()
 
     # send e-mail based on subscription list
     # for each_item in subscription_load():

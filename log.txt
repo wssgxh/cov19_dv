@@ -1,3 +1,52 @@
+2020-07-08 22:13:55[0041],covid_daily_update_themeRiver Saved in E:\OneDrive\code\python\cov19_dv\Django - web/templates/covid_daily_update_themeRiver.html
+2020-07-08 22:13:55[0051],theme river chart Saved
+2020-07-08 22:13:55[0041],chart_cov_daily_increasement Saved in E:\OneDrive\code\python\cov19_dv\Django - web/templates/covid_daily_increasement.html
+2020-07-08 22:13:55[0061],Get daily new data
+2020-07-08 22:11:17[0041],covid_daily_update_themeRiver Saved in E:\OneDrive\code\python\cov19_dv\Django - web/templates/covid_daily_update_themeRiver.html
+2020-07-08 22:11:17[0051],theme river chart Saved
+2020-07-08 22:11:17[0041],chart_cov_daily_increasement Saved in E:\OneDrive\code\python\cov19_dv\Django - web/templates/covid_daily_increasement.html
+2020-07-08 22:11:17[0061],Get daily new data
+2020-07-08 11:07:32[0041],covid_daily_update_themeRiver Saved in E:\OneDrive\code\python\cov19_dv\Django - web/templates/covid_daily_update_themeRiver.html
+2020-07-08 11:07:32[0051],theme river chart Saved
+2020-07-08 11:07:32[0041],chart_cov_daily_increasement Saved in E:\OneDrive\code\python\cov19_dv\Django - web/templates/covid_daily_increasement.html
+2020-07-08 11:07:32[0061],Get daily new data
+2020-07-08 11:05:31[0041],covid_daily_increasement Saved in E:\OneDrive\code\python\cov19_dv\Django - web/templates/covid_daily_increasement.html
+2020-07-08 11:05:31[0051],theme river chart Saved
+2020-07-08 11:05:31[0041],chart_cov_daily_increasement Saved in E:\OneDrive\code\python\cov19_dv\Django - web/templates/covid_daily_increasement.html
+2020-07-08 11:05:31[0061],Get daily new data
+2020-07-08 11:04:36[0041],covid_daily_increasement Saved in E:\OneDrive\code\python\cov19_dv\Django - web/templates/covid_daily_increasement.html
+2020-07-08 11:04:36[0051],theme river chart Saved
+2020-07-08 11:04:36[0041],chart_cov_daily_increasement Saved in E:\OneDrive\code\python\cov19_dv\Django - web/templates/covid_daily_increasement.html
+2020-07-08 11:04:36[0061],Get daily new data
+2020-07-08 10:51:33[0051],theme river chart Saved
+2020-07-08 10:51:33[0041],chart_cov_daily_increasement Saved in E:\ÔÆ\OneDrive\code\python\cov19_dv\Django - web/templates/covid_daily_increasement.html
+2020-07-08 10:51:33[0061],Get daily new data
+2020-07-08 10:49:14[0061],Get daily new data
+2020-07-08 10:49:05[0061],Get daily new data
+2020-07-08 10:48:19[0051],theme river chart Saved
+2020-07-08 10:48:19[0041],chart_cov_daily_increasement Saved in E:\ÔÆ\OneDrive\code\python\cov19_dv\Django - web/templates/covid_daily_increasement.html
+2020-07-08 10:48:19[0061],Get daily new data
+2020-07-08 10:47:21[0051],theme river chart Saved
+2020-07-08 10:47:21[0041],chart_cov_daily_increasement Saved in E:\ÔÆ\OneDrive\code\python\cov19_dv\Django - web/templates/covid_daily_increasement.html
+2020-07-08 10:47:21[0061],Get daily new data
+2020-07-08 10:46:53[0051],theme river chart Saved
+2020-07-08 10:46:53[0041],chart_cov_daily_increasement Saved inE:\ÔÆ\OneDrive\code\python\cov19_dv\Django - web/templates/covid_daily_increasement.html
+2020-07-08 10:46:53[0061],Get daily new data
+2020-07-08 10:42:22[0051],theme river chart Saved
+2020-07-08 10:42:22[0041],chart_cov_daily_increasement Saved inE:\ÔÆ\OneDrive\code\python\cov19_dv\Django - web/templates/covid_daily_increasement.html
+2020-07-08 10:42:22[0061],Get daily new data
+2020-07-08 10:40:20[0051],theme river chart Saved
+2020-07-08 10:40:20[0041],chart_cov_daily_increasement Saved inE:\ÔÆ\OneDrive\code\python\cov19_dv\Django - web/templates/covid_daily_increasement.html
+2020-07-08 10:40:20[0061],Get daily new data
+2020-07-08 10:39:15[0051],theme river chart Saved
+2020-07-08 10:39:15[0041],chart_cov_daily_increasement Saved
+2020-07-08 10:39:15[0061],Get daily new data
+2020-07-08 10:37:50[0051],theme river chart Saved
+2020-07-08 10:37:50[0041],chart_cov_daily_increasement Saved
+2020-07-08 10:37:50[0061],Get daily new data
+2020-07-08 10:32:35[0031],China Map Saved
+2020-07-08 10:32:34[0021],get data from Tencent news
+2020-07-08 10:32:34[0011],Successfully save today's data
 2020-05-31 17:00:06[0051],theme river chart Saved
 2020-05-31 17:00:06[0041],chart_cov_daily_increasement Saved
 2020-05-31 17:00:06[0061],Get daily new data

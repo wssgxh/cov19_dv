@@ -1,3 +1,5 @@
+2020-07-08 22:21:21[0041],chart_cov_daily_increasement Saved in E:\OneDrive\code\python\cov19_dv\\Django - web\templates\covid_daily_increasement_customized.html
+2020-07-08 22:20:27[0041],chart_cov_daily_increasement Saved in E:\ÔÆ\OneDrive\code\python\cov19_dv\\Django - web\templates\covid_daily_increasement_customized.html
 2020-05-21 17:11:37[0051],theme river chart Saved
 2020-05-21 17:11:37[0041],chart_cov_daily_increasement Saved
 2020-03-29 21:36:58[0061],Get daily new data

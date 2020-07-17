@@ -11,7 +11,7 @@ urlpatterns = [
     url('china_map/', view.china_map),
     url('covid_daily_update_themeRiver/', view.covid_daily_update_themeRiver),
     url('covid_daily_update_themeRiver/customized', view.covid_daily_update_themeRiver_customized),
-    url('covid_bar_char_race/', view.covid_bar_char_race),
+
 
 
     url('admin/', view.admin),
